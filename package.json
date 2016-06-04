@@ -1,7 +1,7 @@
 {
-  "name": "@schibstedspain/generator-sui-react",
-  "version": "7.0.0",
-  "description": "A generator for react components",
+  "name": "af-entorno-react",
+  "version": "1.0.0",
+  "description": "Generador de componentes ReactJS",
   "main": "index.js",
   "repository": {
     "type": "git",
@@ -40,7 +40,6 @@
   ],
   "license": "ISC",
   "dependencies": {
-    "pascal-case": "1.1.1",
     "underscore.string": "3.1.1",
     "yeoman-generator": "0.21.1"
   }
