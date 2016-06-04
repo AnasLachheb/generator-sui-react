@@ -1,5 +1,6 @@
 var generators = require('yeoman-generator');
 var pascalCase = require('pascal-case');
+var dasherize = require('underscore.string').dasherize;
 
 module.exports = generators.NamedBase.extend();
 
@@ -10,13 +11,13 @@ module.exports = generators.Base.extend({
     this.prompt([{
       type    : 'input',
       name    : 'name',
-      message : 'Indica el nombre del Componente ( ej.: "mi-componente" )',
+      message : 'What is your component name ( ex.: "your-component-name" )',
       default : this.appname // Default to current folder name
     },
     {
       type    : 'input',
       name    : 'git_url',
-      message : 'Indica la URL del repositorio remoto de Github',
+      message : 'What is your component remote git repository url',
       required : true
     }], function (answers) {
       this.git_url = answers.git_url;
