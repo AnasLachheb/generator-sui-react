@@ -1,6 +1,5 @@
 var generators = require('yeoman-generator');
 var pascalCase = require('pascal-case');
-var dasherize = require('underscore.string').dasherize;
 
 module.exports = generators.NamedBase.extend();
 
@@ -11,27 +10,15 @@ module.exports = generators.Base.extend({
     this.prompt([{
       type    : 'input',
       name    : 'name',
-      message : 'What is your component name ( ex.: "your-component-name" )',
+      message : 'Indica el nombre del Componente ( ej.: "mi-componente" )',
       default : this.appname // Default to current folder name
     },
     {
       type    : 'input',
-      name    : 'prefix',
-      message : 'Set a prefix for your component',
-      default : 'sui-'
-    },
-    {
-      type    : 'input',
       name    : 'git_url',
-      message : 'What is your component remote git repository url',
+      message : 'Indica la URL del repositorio remoto de Github',
       required : true
     }], function (answers) {
-      this.prefix = answers.prefix.replace('-', '');
-      this.component_name = answers.name.match( this.prefix + '-?' ) != null
-                          ? dasherize(answers.name)
-                          : dasherize(this.prefix + '-' + answers.name);
-      this.pascal_name = pascalCase(this.component_name.replace( this.prefix, '' ));
-      this.SUIT_name = this.prefix + '-' + this.pascal_name;
       this.git_url = answers.git_url;
       done();
     }.bind(this));

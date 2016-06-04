@@ -6,9 +6,6 @@ var merge = require('webpack-merge');
 var APP_PATH = path.join(__dirname, '/src');
 var TARGET = process.env.npm_lifecycle_event;
 
-var path = require('path');
-var webpack = require('webpack');
-
 var base = {
   resolve: {
     extensions: ['', '.js', '.jsx']
