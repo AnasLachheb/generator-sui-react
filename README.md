@@ -1,6 +1,6 @@
 # generator-sui-react
 
-[![NPM Version][npm-image]][npm-url]
+[![NPM Version][npm-image]][npm-url] [![Code Climate](https://codeclimate.com/github/SUI-Components/generator-sui-react/badges/gpa.svg)](https://codeclimate.com/github/SUI-Components/generator-sui-react)
 
 A yeoman generator for Schibsted User Interface (**sui**) ReactJS components. By using this generator, you can create components to work as a part of a complex application (atoms or mollecules) or stand-alone components, ready for production.. For more information about **atomic design**, read the following blog post: http://bradfrost.com/blog/post/atomic-web-design/.
 
